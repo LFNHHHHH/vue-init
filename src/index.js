@@ -1,11 +1,20 @@
 import Vue from 'vue'
+import VueRouter from 'vue-router'
+Vue.use(VueRouter)
 
-import login from './login.vue'
+import app from './App.vue'
+import account from './components/Account.vue'
+import goodslist from './components/Goodslist.vue'
+
+var router = new VueRouter({
+  routes: [
+    { path: '/account', component: account },
+    { path: '/goodslist', component: goodslist }
+  ]
+})
 
 var vm = new Vue({
   el: '#app',
-  data: {
-    msg: 'hello'
-  },
-  render: c => c(login)
+  render: c => c(app),
+  router
 })
