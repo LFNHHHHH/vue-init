@@ -3,15 +3,8 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 import app from './App.vue'
-import account from './components/Account.vue'
-import goodslist from './components/Goodslist.vue'
 
-var router = new VueRouter({
-  routes: [
-    { path: '/account', component: account },
-    { path: '/goodslist', component: goodslist }
-  ]
-})
+import router from './router'
 
 var vm = new Vue({
   el: '#app',
